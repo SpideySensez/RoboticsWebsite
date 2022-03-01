@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html>
 
     <meta name="viewport" content="width=device-width">
     <title>https://spideysensez.github.io/RoboticsWebsite/</title>
     <style>
     body {
-  background-image: url('https://i.makeagif.com/media/9-18-2018/r21do1.gif'); 
+  background-image: url('https://www.techsmith.com/blog/wp-content/uploads/2016/08/citylarge.gif'); 
 background-repeat: no-repeat; 
 background-attachment: fixed;
       
@@ -14,19 +13,135 @@ background-attachment: fixed;
      </style>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+<style>
+.alert {
+  padding: 20px;
+  background-color: #0eb9f1;
+  color: white;
+}
 
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+<body>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong> Announcment! </strong> Welcome to my website.
+  </div>
+  </body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+    }
+</style>
+</head>
+<style> 
+  #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #0eb9f1;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
   <body>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+      <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+ <p id="demo" style="color:#0eb9f1";></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 26, 2105 15:37:25").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <p>
     <h1 style="color:#0eb9f1";> <center> Collin's Website  </h1> </center>
+    </p>
+    <label for="file"style="color:#0eb9f1";>Website progress:</label>
+<progress id="file" value="50" max="100"> 50% </progress>
     <a style="color:#0eb9f1"; href="./Robotics.html"><h2> Robotics </h2></a>
     <a style="color:#0eb9f1"; href="./Final.html"><h2> Final </h2></a>
    <h3 style="color:#0eb9f1"; > Programming </h3>
     <h4 style="color:#0eb9f1"; > <i> Cresenta Valley High School </i> </h4>
     <h5 style="color:#0eb9f1"; > October 26th 2021 </h5>
-    <p>
-     <marquee style="color:#0eb9f1"; > <b> <u> <i> Coco, Diamond, Ginger, Max, and Zacko </i> </u> </b> </marquee>
-    </p>
-    <p> 
-  <i style="color:#0eb9f1"; > <b> I learned to program my website to have paragraphs and be able to change the words to  bold and have fonts. </b> </i>
+     <p>
+     <h3> <marquee style="color:#0eb9f1"; > <h4> <b> <u> <i> Coco, Diamond, Ginger, Max, and Zacko </i> </u> </b> </marquee> </h3>
+   </p>
+   
+   <p>
+   <h4> <i style="color:#0eb9f1"; > <b> I learned to program my website to have paragraphs and be able to change the words to  bold and have fonts. </b> </i> </h4>
     
     <h3 style="color:#0eb9f1"; > My hobbies are playing video games with my friends. </h3>
     
@@ -40,6 +155,174 @@ background-attachment: fixed;
     Hello world
     <script src="script.js"></script>
   </body>
+ <body>
+     <style>
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+</head>
+<body>
 
 
+<div class="img-zoom-container">
+  <img id="myimage" src="./Files/Wolf.jpg" width="300" height="240">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+
+</body>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Name')" style="color:#0eb9f1";>Name</button>
+  <button class="tablinks" onclick="openCity(event, 'Birthday')" style="color:#0eb9f1";>Birthday</button>
+</div>
+
+<div id="Name" class="tabcontent">
+  <h3 style="color:#0eb9f1";>Name</h3>
+  <p style="color:#0eb9f1";>Collin</p>
+</div>
+
+<div id="Birthday" class="tabcontent">
+  <h3 style="color:#0eb9f1";>Birthday</h3>
+  <P style="color:#0eb9f1";>May 26th 2005</p> 
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+  
 </html>
